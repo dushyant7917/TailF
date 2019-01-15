@@ -65,6 +65,7 @@ def append_text(text):
 def test_message(message):
     emit('my_response', {'data': message['data']}, broadcast = False)
 
+
 @socketio.on('connect', namespace='/test')
 def test_connect():
     # need visibility of the global object and variables
@@ -75,11 +76,11 @@ def test_connect():
     line = subprocess.check_output(['tail', '-1', "logs.txt"])
     emit('my_response', {'data': str(line)}, broadcast = False)
 
-    #Start the random number generator thread only if the thread has not been started before.
     if not thread.isAlive():
         print("Starting Thread")
         thread = LastLine()
         thread.start()
+
 
 @socketio.on('disconnect', namespace='/test')
 def test_disconnect():
