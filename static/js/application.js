@@ -4,8 +4,12 @@ $(document).ready(function(){
 
     //receive details from server
     socket.on('newnumber', function(msg) {
-        console.log(type(msg.number))
+        console.log(typeof(msg.number))
         $('#log').append('<br>' + $('<div/>').text(msg.number).html());
+    });
+
+    socket.on('my_response', function(msg) {
+        $('#log').append('<br>' + $('<div/>').text(msg.data).html());
     });
 
 });
