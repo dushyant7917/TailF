@@ -17,4 +17,4 @@ python3 application.py
 ### To use
 Hit http://localhost:5000 in the browser
 ### To append data in the log file on the server use
-http://localhost:5000/append/<text> endpoint
+http://localhost:5000/append/ + <text>
