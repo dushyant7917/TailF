@@ -18,3 +18,6 @@ python3 application.py
 Hit http://localhost:5000 in the browser
 ### To append data in the log file on the server use
 http://localhost:5000/append/ + text to append
+
+### Demo link
+https://drive.google.com/file/d/1W8YZS_QJF-LOCYQxcAObS7HQXKd-YWRN/view
